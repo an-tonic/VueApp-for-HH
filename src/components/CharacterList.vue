@@ -75,7 +75,7 @@ watch(() => props.filters, () => {
       <div class="character-info">
         <h1 class = "character-title">{{ character.name }}</h1>
         <p class="status">
-          <span class="status_icon" :class="{ alive: character.status === 'Alive', dead: character.status === 'Dead' }"></span>
+          <span class="status_icon" :class="{ alive: character.status === 'Alive', dead: character.status === 'Dead' , unknown: character.status === 'unknown' }"></span>
           {{ character.status }} - {{ character.species }}
         </p>
         <p>Last known location:</p>
@@ -121,7 +121,7 @@ watch(() => props.filters, () => {
   font-family:  Segoe UI Black,serif;
   font-weight: 800;
   color: rgb(245, 245, 245);
-  margin: 5px;
+  margin: 5px 5px 20px;
 }
 
 .status{
@@ -146,8 +146,12 @@ watch(() => props.filters, () => {
   background: rgb(214, 61, 46);
 }
 
+.unknown {
+  background: rgb(131, 131, 131);
+}
+
 .character-info{
-  margin: 10px;
+  margin-left: 10px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -155,7 +159,8 @@ watch(() => props.filters, () => {
 .character-info p{
   color: rgb(245, 245, 245);
   font-family: Segoe UI, sans-serif;
-  margin: 6px;
+  margin-bottom: 16px;
+  margin-top: 0;
 }
 
 .pagination {
