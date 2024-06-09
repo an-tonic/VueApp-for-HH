@@ -1,49 +1,23 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-import ExampleComponent from './components/Example.vue'
+import CharacterList from './components/CharacterList.vue';
+import CharacterFilter from './components/CharacterFilter.vue';
+import {ref} from "vue";
+
+const filters = ref({});
+
+const applyFilter = (newFilters) => {
+  filters.value = newFilters;
+};
+
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did itt!" />
-    </div>
+    <h1>Rick and Morty Characters</h1>
   </header>
 
   <main>
-    <TheWelcome />
-    <ExampleComponent />
+    <CharacterFilter @apply-filter="applyFilter" />
+    <CharacterList :filters="filters" />
   </main>
 </template>
-
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
