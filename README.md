@@ -1,29 +1,57 @@
-# rick-and-morty-characters
+# Rick and Morty Characters
 
-This template should help get you started developing with Vue 3 in Vite.
+This Vue.js application fetches character data from the [Rick and Morty API](https://rickandmortyapi.com/). Users can browse characters with pagination and filtering.
 
-## Recommended IDE Setup
+## Installation
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+1. Clone the repository:
 
-## Customize configuration
+    ```sh
+    git clone https://github.com/an-tonic/hh-test-rick-and-morty-characters.git
+    ```
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+2. Navigate to the project directory:
 
-## Project Setup
+    ```sh
+    cd rick-and-morty-characters
+    ```
 
-```sh
-npm install
-```
+3. Install dependencies:
 
-### Compile and Hot-Reload for Development
+    ```sh
+    npm install
+    ```
+
+## Development
+
+Run in development mode:
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+## Deployment for Production
+
+Compile, minify and post on GitPages for production:
 
 ```sh
-npm run build
+npm run deploy
 ```
+
+## Project Structure
+
+- **`src/`**: Source code.
+    - **`components/`**: Vue components.
+    - **`assets/`**: Static assets.
+    - **`App.vue`**: Main Vue component.
+    - **`main.js`**: Main JavaScript file.
+- **`public/`**: Static files.
+
+## Technologies Used
+
+- **Vue.js**
+- **Vite**
+- **Axios**
+- **CSS**
+
+---
