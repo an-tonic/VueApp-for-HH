@@ -12,5 +12,5 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  base: '/hh-test-rick-and-morty-characters/', // Add this line with your repository name
+  base: '/VueApp-for-HH/', // Add this line with your repository name
 });
